@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVUC for Vehicles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #1a365d;
+        }
+        h1, h2 {
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        @media (max-width: 600px) {
+            th, td {
+                display: block;
+                width: 100%;
+            }
+            th {
+                display: none;
+            }
+            tr {
+                margin-bottom: 15px;
+                display: block;
+                border: 1px solid #ddd;
+            }
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-left: 10px;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MVUC for Vehicles</h1>
+
+        <h2>Private and Government Vehicles</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                    <th>Gross Vehicle Weight (GVW)</th>
+                    <th>MVUC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Passenger Cars (Light, Medium, Heavy)</td>
+                    <td>Up to 1,600 kg</td>
+                    <td>₱1,600</td>
+                </tr>
+                <tr>
+                    <td>Passenger Cars (Light, Medium, Heavy)</td>
+                    <td>1,601 to 2,300 kg</td>
+                    <td>₱3,600</td>
+                </tr>
+                <tr>
+                    <td>Passenger Cars (Light, Medium, Heavy)</td>
+                    <td>2,301 kg and above</td>
+                    <td>₱8,000</td>
+                </tr>
+                <tr>
+                    <td>Utility Vehicles</td>
+                    <td>Up to 2,700 kg</td>
+                    <td>₱2,000</td>
+                </tr>
+                <tr>
+                    <td>Utility Vehicles</td>
+                    <td>2,701 to 4,500 kg</td>
+                    <td>₱2,000 + 0.40 x GVW in excess of 2,700 kg</td>
+                </tr>
+                <tr>
+                    <td>Sports Utility Vehicles</td>
+                    <td>Up to 2,700 kg</td>
+                    <td>₱2,300</td>
+                </tr>
+                <tr>
+                    <td>Sports Utility Vehicles</td>
+                    <td>2,701 to 4,500 kg</td>
+                    <td>₱2,300 + 0.46 x GVW in excess of 2,700 kg</td>
+                </tr>
+                <tr>
+                    <td>Motorcycles</td>
+                    <td>Without sidecars</td>
+                    <td>₱240</td>
+                </tr>
+                <tr>
+                    <td>Motorcycles</td>
+                    <td>With sidecars</td>
+                    <td>₱300</td>
+                </tr>
+                <tr>
+                    <td>Trucks and Truck Buses</td>
+                    <td>4,501 kg and above</td>
+                    <td>₱1,800 + 0.24 x GVW in excess of 2,700 kg</td>
+                </tr>
+                <tr>
+                    <td>Trailers</td>
+                    <td>4,501 kg and above</td>
+                    <td>0.24 x GVW</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>MVUC for Hire Vehicles</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                    <th>Gross Vehicle Weight (GVW)</th>
+                    <th>MVUC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Passenger Cars (Light, Medium, Heavy)</td>
+                    <td>Up to 1,600 kg</td>
+                    <td>₱900</td>
+                </tr>
+                <tr>
+                    <td>Passenger Cars (Light, Medium, Heavy)</td>
+                    <td>1,601 to 2,300 kg</td>
+                    <td>₱1,800</td>
+                </tr>
+                <tr>
+                    <td>Utility Vehicles</td>
+                    <td>Up to 4,500 kg</td>
+                    <td>0.30 x GVW</td>
+                </tr>
+                <tr>
+                    <td>Sports Utility Vehicles</td>
+                    <td>Up to 2,700 kg</td>
+                    <td>₱2,300</td>
+                </tr>
+                <tr>
+                    <td>Sports Utility Vehicles</td>
+                    <td>2,701 to 4,500 kg</td>
+                    <td>₱2,300 + 0.46 x GVW in excess of 2,700 kg</td>
+                </tr>
+                <tr>
+                    <td>Motorcycles</td>
+                    <td>With sidecar</td>
+                    <td>₱300</td>
+                </tr>
+                <tr>
+                    <td>Trailers</td>
+                    <td>4,501 kg and above</td>
+                    <td>0.24 x GVW</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>MVUC for Aged Private Vehicles</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                    <th>Gross Vehicle Weight (GVW)</th>
+                    <th>MVUC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Light cars</td>
+                    <td>Models from 1995 to 2000 (Up to 1,600 kg)</td>
+                    <td>₱2,000</td>
+                </tr>
+                <tr>
+                    <td>Light cars</td>
+                    <td>Models from 1994 and older (Up to 1,600 kg)</td>
+                    <td>₱1,400</td>
+                </tr>
+                <tr>
+                    <td>Medium cars</td>
+                    <td>Models from 1997 to 2000 (1,601 kg to 2,300 kg)</td>
+                    <td>₱6,000</td>
+                </tr>
+                <tr>
+                    <td>Medium cars</td>
+                    <td>Models from 1995 and 1996 (1,601 kg to 2,300 kg)</td>
+                    <td>₱4,800</td>
+                </tr>
+                <tr>
+                    <td>Medium cars</td>
+                    <td>Models from 1994 (1,601 kg to 2,300 kg)</td>
+                    <td>₱2,400</td>
+                </tr>
+                <tr>
+                    <td>Heavy cars</td>
+                    <td>Models from 1995 and older (2,301 kg and above)</td>
+                    <td>₱12,000</td>
+                </tr>
+                <tr>
+                    <td>Heavy cars</td>
+                    <td>Models from 1994 and older (2,301 kg and above)</td>
+                    <td>₱5,600</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h3><a href="index.html" class="back-link">← Back to main page</a></h3>
+    
+    </div>
+</body>
+</html>

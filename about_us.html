@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+        }
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .portrait {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .portrait:hover {
+            transform: scale(1.05);
+        }
+        .member-name {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: white;
+        }
+        .member-role {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Team</h1>
+        <a href="index.html" class="back-link">← Back to main page</a>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <a href="https://www.facebook.com/ronald.valisno">
+                    <img src="REV2.jpg" alt="Team Member 1" class="portrait" style="display: block; margin: 0 auto;">
+                </a>
+                <h2 class="member-name">Ronaldo E. Valisno Jr.</h2>
+                <p class="member-role">Lead Developer</p>
+            </div>
+            
+            <div class="team-member">
+                <a href="https://www.facebook.com/profile.php?id=100080627048588">
+                    <img src="jm.jpg" alt="Team Member 2" class="portrait">
+                </a>
+                <h2 class="member-name">Jesan Marie Banaag</h2>
+                <p class="member-role">UI/UX Designer</p>
+            </div>
+            
+            <div class="team-member">
+                <a href="https://www.facebook.com/zroe.delacruz.5/">
+                    <img src="RJ2.jpg" alt="Team Member 3" class="portrait">
+                </a>
+                <h2 class="member-name">Ron Joseph P. Dela Cruz</h2>
+                <p class="member-role">Backend Developer</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
